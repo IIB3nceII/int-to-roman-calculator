@@ -21,6 +21,7 @@ const Converter: FC = () => {
   return (
     <div>
       <Input
+        data-testid="converter-input"
         type="number"
         value={inputValue}
         onChange={handleInputValueChange}
@@ -28,7 +29,7 @@ const Converter: FC = () => {
         max="1000"
         placeholder="Write a number between 1 and 1000"
       />
-      <h2>{outputValue}</h2>
+      <h2 data-testid="converter-output">{outputValue}</h2>
     </div>
   );
 };
