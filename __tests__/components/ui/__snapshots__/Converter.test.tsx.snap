@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Converter component tests Matches snapshot 1`] = `
+<div>
+  <div>
+    <input
+      data-testid="converter-input"
+      max="1000"
+      min="1"
+      placeholder="Write a number between 1 and 1000"
+      type="number"
+      value="1"
+    />
+    <h2
+      data-testid="converter-output"
+    >
+      I
+    </h2>
+  </div>
+</div>
+`;

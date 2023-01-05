@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, useMemo, useState } from "react";
 import s from "./Converter.module.css";
 import { Input } from "../../common";
-import { convertToRoman } from "utils";
+import { convertToRoman } from "../../../utils";
 
 const Converter: FC = () => {
   /**
