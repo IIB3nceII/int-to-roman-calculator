@@ -1,12 +1,14 @@
 import { ChangeEvent, FC, useMemo, useState } from "react";
 import s from "./Converter.module.css";
 import { Input } from "../../common";
+import { convertToRoman } from "utils";
 
 const Converter: FC = () => {
   const [inputValue, setInputValue] = useState<number>(1);
-  const outputValue = useMemo<string>(() => {
-    return `${inputValue}`;
-  }, [inputValue]);
+  const outputValue = useMemo<string>(
+    () => convertToRoman(inputValue),
+    [inputValue]
+  );
 
   const handleInputValueChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const {
