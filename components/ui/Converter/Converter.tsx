@@ -9,7 +9,13 @@ const Converter: FC = () => {
   }, [inputValue]);
 
   const handleInputValueChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setInputValue(+e.target.value);
+    const {
+      target: { value },
+    } = e;
+
+    if (isNaN(+value) || isNaN(parseFloat(value))) return;
+
+    if (+value > 0 && +value <= 1000) setInputValue(+value);
   };
 
   return (
