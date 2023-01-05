@@ -23,7 +23,15 @@ const convertToRoman = (rawValue: number): string => {
   };
 
   for (const key in lookupTable) {
-    console.log(lookupTable[key]);
+    console.log(key);
+    const num = lookupTable[key];
+
+    while (num <= rawValue) {
+      rawValue -= num;
+      console.log(rawValue);
+      romanValue += key;
+      console.log(romanValue);
+    }
   }
 
   return romanValue;
