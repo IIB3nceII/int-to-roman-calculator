@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '@/pages/index.module.css'
+import Head from "next/head";
+import styles from "@/pages/index.module.css";
+import { Converter } from "../components";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
         <title>Roman Numeral Calculator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <h1>🚀 Let's get this party started!</h1>
+
+      <Converter />
     </div>
-  )
+  );
 }
