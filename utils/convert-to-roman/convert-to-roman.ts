@@ -1,3 +1,8 @@
+/**
+ * Converting an integer to a valid roman number if the input is between 1 and 1000.
+ * @param {number} rawValue - The number to be converted to Roman numerals.
+ * @returns A roman number as string.
+ */
 const convertToRoman = (rawValue: number): string => {
   if (rawValue < 1 || rawValue > 1000)
     return "Input value must be between 0 and 1000!";

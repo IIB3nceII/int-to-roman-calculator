@@ -4,12 +4,25 @@ import { Input } from "../../common";
 import { convertToRoman } from "utils";
 
 const Converter: FC = () => {
+  /**
+   * Input variable to store the arabic number.
+   * @state
+   */
   const [inputValue, setInputValue] = useState<number>(1);
+
+  /**
+   * Output value to store the roman number.
+   * @hook
+   */
   const outputValue = useMemo<string>(
     () => convertToRoman(inputValue),
     [inputValue]
   );
 
+  /**
+   * Function to handle the input value changes.
+   * @param e - ChangeEvent<HTMLInputElement>
+   */
   const handleInputValueChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const {
       target: { value },
